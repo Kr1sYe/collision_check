@@ -5,3 +5,6 @@ planning scene collision_check
 roslaunch paintingrobot_moveit_config demo.launch
 
 roslaunch planning_scene planning_scene.launch
+
+## Debug
+![Image text](https://github.com/zzuljs/CppLearning/blob/master/CppLearning/raw/master/Itachi.jpg)
