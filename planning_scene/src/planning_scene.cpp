@@ -122,7 +122,7 @@ int main(int argc, char** argv)
     robot_model_loader::RobotModelLoaderPtr robot_model_loader(
         new robot_model_loader::RobotModelLoader("robot_description"));
 
-    const robot_model::RobotModelPtr& kinematic_model = robot_model_loader->getModel();
+    // const robot_model::RobotModelPtr& kinematic_model = robot_model_loader->getModel();
 
     moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 
@@ -155,6 +155,9 @@ int main(int argc, char** argv)
 
     /* add a single object to ps's world */
     add_objects(planning_scene_interface);
+
+    // 插入Object后，需要给Planning Scene 一点时间响应
+    sleep(2.0);
 
 
     ros::Rate loop_rate(1.0);
